@@ -1,5 +1,6 @@
 var express = require('express');
-var fs = requrie('fs');
+//console.log("express here");
+var fs = require('fs');
 
 var buf = fs.readFileSync("index.html");
 
@@ -10,6 +11,7 @@ app.get('/', function(request, response) {
 });
 
 var port = process.env.PORT || 5000;
+//console.log(process.env.PORT);
 app.listen(port, function() {
   console.log("Listening on " + port);
 });
